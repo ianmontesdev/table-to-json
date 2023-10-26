@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ian Montes - Ejercicio Voluntario</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css"
+    />
+    <style>
+      body {
+        display: flex;
+        gap: 1rem;
+        min-width: 100vw;
+        width: max-content;
+        justify-content: center;
+      }
+      form {
+        width: fit-content;
+      }
+
+      table {
+        width: max-content;
+      }
+      th {
+        padding: 0rem 1rem;
+      }
+
+      td {
+        text-align: center;
+      }
+
+      .invalid {
+        background-color: #500f0f;
+      }
+
+      .valid {
+        background-color: #2a470f;
+      }
+
+      @media screen and (max-width: 900px) {
+        body {
+          flex-direction: column-reverse;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" />
+      <fieldset>
+        <legend>Género</legend>
+        <label
+          >Masculino
+          <input
+            type="radio"
+            name="genero"
+            id="genero"
+            value="masculino"
+            checked
+        /></label>
+        <label
+          >Femenino
+          <input type="radio" name="genero" id="genero" value="femenino"
+        /></label>
+      </fieldset>
+      <label for="edad">Edad</label>
+      <input type="number" id="edad" name="edad" />
+      <label for="dni">DNI</label>
+      <input type="text" id="dni" name="dni" />
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" />
+      <label for="puesto">Puesto</label>
+      <input type="text" id="puesto" name="puesto" />
+      <label for="localizacion">Localización</label>
+      <input type="text" id="localizacion" name="localizacion" />
+      <button type="button" id="button-save">Guardar</button>
+    </form>
+    <section>
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Género</th>
+            <th>Edad</th>
+            <th>DNI</th>
+            <th>Email</th>
+            <th>Puesto</th>
+            <th>Localización</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button id="button-generate">Generar archivo</button>
+    </section>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
